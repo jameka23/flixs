@@ -9,9 +9,11 @@ import UIKit
 import AlamofireImage
 
 class MovieGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
     
-    @IBOutlet var collectionView: UICollectionView!
     
+    
+    @IBOutlet var collectionsView: UICollectionView!
     var movies = [[String:Any]]()
 
     
@@ -19,8 +21,8 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionsView.delegate = self
+        collectionsView.dataSource = self
         
 
         let url = URL(string: "https://api.themoviedb.org/3/movie/581392/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
@@ -34,7 +36,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
                   let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 self.movies = dataDictionary["results"] as! [[String:Any]]
                 
-                self.collectionView.reloadData()
+                self.collectionsView.reloadData()
                 print(self.movies)
                }
             }
@@ -46,7 +48,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
+        let cell = collectionsView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
         
         let movie = movies[indexPath.item]
         

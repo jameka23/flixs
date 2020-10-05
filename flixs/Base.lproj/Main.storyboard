@@ -187,6 +187,9 @@
                         </cells>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Superhero" id="6fe-yj-FQ2"/>
+                    <connections>
+                        <outlet property="collectionsView" destination="uIl-5t-ZCC" id="yZe-M4-vXr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA0-yf-PhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
