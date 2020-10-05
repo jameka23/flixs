@@ -17,7 +17,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### App Walkthrough GIF
 `TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
 
-<img src="./Flixs2" width=250><br>
+<img src="./Flixs2.gif" width=250><br>
 
 ### Notes
 I had a hard time with this. At first I was able to get the grid view going with movies, but then I changed the size of my uiimageview and ran it again and it gave this error 
